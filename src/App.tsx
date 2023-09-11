@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { TreeView, TreeItem } from '@mui/lab';
+import DraggableTreeView from './DraggableTreeView';
 import { useDrag } from 'react-dnd';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -91,16 +92,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
-        <TreeView
-          aria-label="customized"
-          defaultCollapseIcon={<ExpandMoreIcon />}
-          defaultExpandIcon={<ChevronRightIcon />}
-        >
-          {renderTree(data)}
-        </TreeView>
-      </div>
-
+      <DraggableTreeView />
     </div>
   );
 }
