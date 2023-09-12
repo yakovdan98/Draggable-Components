@@ -1,6 +1,6 @@
-import { TreeItemProps } from '@mui/lab';
+import { TreeItemProps } from '@mui/x-tree-view';
 import { useDrag, useDrop } from 'react-dnd';
-import { TreeItem } from '@mui/lab';
+import { TreeItem } from '@mui/x-tree-view';
 import * as React from 'react';
 import { RenderTree } from './DraggableTreeView';
 
@@ -21,7 +21,7 @@ const DraggableTreeItem = ({ nodeData, handleDrop, ...props }: DraggableTreeItem
       accept: 'file',
       drop: (item: RenderTree, monitor) => {
          const didDrop = monitor.didDrop();
-         if(didDrop) return;
+         if (didDrop) return;
          handleDrop(item, nodeData);
       },
       collect: (monitor) => ({

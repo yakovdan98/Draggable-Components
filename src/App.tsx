@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { TreeView, TreeItem } from '@mui/lab';
+import { TreeView, TreeItem } from '@mui/x-tree-view';
 import DraggableTreeView from './DraggableTreeView';
 import { useDrag } from 'react-dnd';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
